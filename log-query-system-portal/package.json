@@ -1,0 +1,21 @@
+{
+  "name": "log-query-system-portal",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "vue": "^3.3.4",
+    "vue-router": "^4.2.4",
+    "element-plus": "^2.3.8",
+    "axios": "^1.4.0",
+    "dayjs": "^1.11.9"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.2.3",
+    "vite": "^4.4.7"
+  }
+}

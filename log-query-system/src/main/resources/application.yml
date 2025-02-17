@@ -1,0 +1,52 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: log-query-system
+  
+  # 数据库配置
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://192.168.1.1:3306/OCR?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai
+    username: root
+    password: yourPassword
+
+  # 跨域配置
+  mvc:
+    cors:
+      allowed-origins: "http://localhost:5173"
+      allowed-methods: "GET,POST,PUT,DELETE,OPTIONS"
+      allowed-headers: "*"
+      allow-credentials: true
+      max-age: 3600
+
+# Elasticsearch配置
+elasticsearch:
+  scheme: http
+  username: elastic
+  password: elastic123
+  port: 9200
+  environments:
+    bx:
+      nodes:
+        - name: node1
+          host: localhost
+    wgq:
+      nodes:
+        - name: node1
+          host: wgq-es-host
+
+# PageHelper分页插件配置
+pagehelper:
+  helper-dialect: mysql
+  reasonable: true
+  support-methods-arguments: true
+  params: count=countSql
+
+logging:
+  level:
+    root: INFO
+  com:
+      example:
+        logquerysystem: DEBUG

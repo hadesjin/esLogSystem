@@ -1,0 +1,13 @@
+# Elasticsearch
+#elasticsearch.bx.host=localhost
+#elasticsearch.bx.port=9200
+#elasticsearch.wgq.host=localhost
+#elasticsearch.wgq.port=9200
+#elasticsearch.scheme=http1
+
+# http port
+server.port=8080
+
+# log info
+logging.level.root=INFO
+logging.level.com.example.logquerysystem=DEBUG
